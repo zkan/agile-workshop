@@ -1,4 +1,4 @@
-# Agile Workshop
+# Agile Engineering Practices Workshop
 
 ## Compiling LaTeX Handout
 
