@@ -66,9 +66,11 @@ tools installed on their machine.
 \noindent \textbf{Introduction:} This workshop aims for anyone who wants to
 learn the Agile engineering practices. Participants will learn how to use the
 test-driven development (TDD) and acceptance-test driven development (ATDD) to
-develop software. We will use Python since it is relatively easy to get started
-developing a program. By the end of this workshop, participants should be able
-to use the practices in the real-world software development.
+develop high-quality software. We will learn and use Python to implement a
+simple program since it is relatively easy to get started with less effort
+compared to most programming languages. By the end of this workshop,
+participants should be able to use the practices they learn in the real-world
+software development.
 
 \section*{Solving FizzBuzz using Test-Driven Development}
 
@@ -112,8 +114,8 @@ Ran 0 tests in 0.000s
 OK
 \end{verbatim}
 
-\noindent This means we have 0 tests and it is what we expect since we have not
-written any test yet. Let's add a test case now. Add code below to the test
+\noindent This means we have 0 tests and this is what we expect since we have
+not written any test yet. Let's add a test case with the code below to the test
 suite.
 
 \begin{verbatim}
@@ -144,11 +146,11 @@ Ran 1 test in 0.000s
 FAILED (errors=1)
 \end{verbatim}
 
-\noindent We get an error here. Again this is what we expect since we have not
-written any code for FizzBuzz yet. See what the error says. We will follow it.
-\\
+\noindent We got an error here. Again this is what we expect since we have not
+written any code for FizzBuzz yet. See what the error said and we will follow
+it. \\
 
-\noindent Let's fix the error first and make the test fails. Now we create a
+\noindent Let's fix the error first and try to make the test fails. Create a
 new separate Python script named {\tt fizzbuzz.py} then write the code below.
 
 \begin{verbatim}
@@ -156,7 +158,7 @@ def fizzbuzz():
     pass
 \end{verbatim}
 
-\noindent Import our code into our test suite. Add the code below to {\tt
+\noindent Import our code into our test suite by adding the code below to {\tt
 fizzbuzz\_test.py}.
 
 \begin{verbatim}
@@ -182,8 +184,8 @@ FAILED (errors=1)
 \end{verbatim}
 
 \noindent The error has changed now. We design our FizzBuzz program to take one
-argument, so we need to implement our program that way. Let's take one
-parameter in our method. \\
+argument, so we need to implement our program that way. Let's change our {\tt
+fizzbuzz} method to take one parameter.
 
 \begin{verbatim}
 def fizzbuzz(number):
@@ -216,12 +218,18 @@ time. :-)
 \noindent In this section, we will develop a Web application for FizzBuzz using
 the acceptance test-driven development (ATDD). The application contains a form
 to take a number as input then prints out the result from the FizzBuzz program
-we have done in the previous section.
+we have done in the previous section. Before jumping in the ATDD section, let's
+learn the tools we will use first:
+
+\begin{itemize}
+  \item Robot Framework
+  \item Flask
+\end{itemize}
 
 \subsection*{Robot Framework}
 
-\noindent We will learn the Robot Framework before use it for the ATDD. Let's
-follow the steps below:
+\noindent We will learn the Robot Framework in this section and use it for the
+ATDD later. Let's follow the steps below:
 
 \begin{enumerate}
   \item Go to the GitHub {\tt https://github.com/zkan/hello-robotframework}.
@@ -236,8 +244,8 @@ without any error.
 $ robot testcases/google.robot
 \end{verbatim}
 
-\noindent We should see a browser is fired up and the output gets printed out
-like this:
+\noindent We should see a browser fired up and the output gets printed out like
+this:
 
 \begin{verbatim}
 ==============================================================================
@@ -256,9 +264,10 @@ Report:  /Users/zkan/Projects/hello-robotframework/report.html
 
 \subsection*{Flask (A Python Microframework)}
 
-\noindent Flask is a Web microframework for Python. It is very easy to get a
-Web application up and running in minutes. We will use it to develop a Web
-application in this workshop. Let's follow the steps below:
+\noindent Flask is a Web microframework for Python. We can get a Web
+application up and running easily in minutes using this framework. We will use
+it to develop our Web application in this workshop. Let's follow the steps
+below:
 
 \begin{enumerate}
   \item Go to the GitHub {\tt https://github.com/zkan/fizzbuzz-flask}.
@@ -283,7 +292,7 @@ Figure~\ref{fig:flask-web-server-local}. \\
   \label{fig:flask-web-server-local}
 \end{figure}
 
-\noindent Let's see the code in {\tt app.py}.
+\noindent Let's see the code in {\tt app.py} under the {\tt web} folder.
 
 \begin{verbatim}
 from flask import Flask, render_template, request
@@ -309,8 +318,8 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 \end{verbatim}
 
-\noindent Play around with the app and take some minutes to understand how the
-code works.
+\noindent Play around with the application and take some minutes to understand
+how the code works.
 
 \subsection*{Getting Started with ATDD using Robot Framework}
 
@@ -389,8 +398,9 @@ Report:  /Users/zkan/Projects/hello-robotframework/report.html
 \end{verbatim}
 
 \noindent As seen in the output above, we have 1 failed test. This is what we
-expect. We first create a test case then we fix it by implementing the feature
-with the actual code. ATDD process starts now. Take your time. :-) \\\\
+expect. We first create a test case then we will fix it by implementing the
+feature added with the actual code. The ATDD process starts now. Take your
+time. :-) \\\\
 
 \noindent ``Learning is experience. Everything else is just information.'' ---
 Albert Einstein
