@@ -66,11 +66,11 @@ tools installed on their machine.
 \noindent \textbf{Introduction:} This workshop aims for anyone who wants to
 learn the Agile engineering practices. Participants will learn how to use the
 test-driven development (TDD) and acceptance-test driven development (ATDD) to
-develop high-quality software. We will learn and use Python to implement a
-simple program since it is relatively easy to get started with less effort
-compared to most programming languages. By the end of this workshop,
-participants should be able to use the practices they learn in the real-world
-software development.
+develop high-quality software. Also, they will learn Python and use it to
+implement a simple program since Python is relatively easy to get started with
+less effort compared to most programming languages. By the end of this
+workshop, participants should be able to use the practices they learn here in
+the real-world software development.
 
 \section*{Solving FizzBuzz using Test-Driven Development}
 
@@ -185,7 +185,7 @@ FAILED (errors=1)
 
 \noindent The error has changed now. We design our FizzBuzz program to take one
 argument, so we need to implement our program that way. Let's change our {\tt
-fizzbuzz} method to take one parameter.
+fizzbuzz} method in {\tt fizzbuzz.py} to take one parameter.
 
 \begin{verbatim}
 def fizzbuzz(number):
@@ -210,7 +210,7 @@ Ran 1 test in 0.000s
 FAILED (failures=1)
 \end{verbatim}
 
-\noindent Our test fails now! We can then start the TDD process. Take your
+\noindent Our test fails now! We can then continue the TDD process. Take your
 time. :-)
 
 \section*{Solving FizzBuzz using Acceptance Test-Driven Development}
@@ -363,10 +363,14 @@ command below:
 $ robot testcases/fizzbuzz.robot
 \end{verbatim}
 
+\noindent See if the script works or not. If it does, let's take a minute to
+understand the output before we move on. \\
+
 \noindent {\bf Note:} Keep the FizzBuzz Web application up and running and use
 the right virtual environment. \\
 
-\noindent Let's try adding a new test case.
+\noindent Now we want to continue developing the FizzBuzz program. We want it
+to print ``Fizz'' out if the input is 6; therefore, we add a new test case.
 
 \begin{verbatim}
 Go to app and input 6 then should see Fizz
@@ -397,9 +401,9 @@ Log:     /Users/zkan/Projects/hello-robotframework/log.html
 Report:  /Users/zkan/Projects/hello-robotframework/report.html
 \end{verbatim}
 
-\noindent As seen in the output above, we have 1 failed test. This is what we
-expect. We first create a test case then we will fix it by implementing the
-feature added with the actual code. The ATDD process starts now. Take your
+\noindent As seen in the output above, our new test case fails as expected. We
+first create a new test case then we fix it by implementing that feature in the
+actual code. This is the ATDD process. The feedback loop starts now.  Take your
 time. :-) \\\\
 
 \noindent ``Learning is experience. Everything else is just information.'' ---
